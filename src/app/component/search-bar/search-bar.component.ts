@@ -80,6 +80,16 @@ export class SearchBarComponent implements OnInit {
         this.focusOnPlaceInput();
     }
 
+    // Remove item dos selecionados
+    removeOption(option) {
+        let index = this.dataService.searchOption.indexOf(option);
+
+        if (index >= 0) this.dataService.searchOption.splice(index, 1);
+        this.focusOnPlaceInput();
+
+        this.onSelectedOption.emit(this.dataService.searchOption);
+    }
+
     // focus the input field and remove any unwanted text.
     focusOnPlaceInput() {
         this.autocompleteInput.nativeElement.focus();
