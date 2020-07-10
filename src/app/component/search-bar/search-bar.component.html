@@ -1,1 +1,31 @@
-<p>search-bar works!</p>
+<form class="example-form">
+    <mat-form-field class="example-full-width" aria-label="Fruit selection" style="width: 100%;">
+        <mat-chip-list #chipList>
+            <mat-chip *ngFor="let option of this.dataService.searchOption" (removed)="removeOption(option)">
+                {{ option.title }}
+
+                <mat-icon matChipRemove>cancel</mat-icon>
+            </mat-chip>
+
+            <input
+                #autocompleteInput
+                type="text"
+                placeholder="Enter title"
+                aria-label="Number"
+                matInput
+                [formControl]="myControl"
+                [matAutocomplete]="auto"
+                [matChipInputFor]="chipList"
+            />
+            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option
+                    *ngFor="let option of autoCompleteList"
+                    [value]="option"
+                    (onSelectionChange)="filterPostList($event)"
+                >
+                    {{ option.title }}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-chip-list>
+    </mat-form-field>
+</form>
