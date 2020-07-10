@@ -1,1 +1,10 @@
-<p>home-page works!</p>
+<div style="margin: auto; width: 70%; margin-top: 30px;">
+    <app-search-bar></app-search-bar>
+</div>
+<div class="group">
+    <div *ngFor="let post of posts" class="post">
+        <p><b>Item :</b>{{ post.id }}</p>
+        <p><b>Title :</b> {{ post.title }}</p>
+        <p><b>Body: </b>{{ post.body }}</p>
+    </div>
+</div>
