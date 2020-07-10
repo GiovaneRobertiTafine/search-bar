@@ -1,8 +1,8 @@
 <div style="margin: auto; width: 70%; margin-top: 30px;">
-    <app-search-bar></app-search-bar>
+    <app-search-bar (onSelectedOption)="onSelectedFilter($event)"></app-search-bar>
 </div>
 <div class="group">
-    <div *ngFor="let post of posts" class="post">
+    <div *ngFor="let post of posts" [class.is-active]="post.isActive" class="post">
         <p><b>Item :</b>{{ post.id }}</p>
         <p><b>Title :</b> {{ post.title }}</p>
         <p><b>Body: </b>{{ post.body }}</p>

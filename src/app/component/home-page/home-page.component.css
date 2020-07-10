@@ -10,3 +10,7 @@
     margin-top: 10px;
     padding: 10px;
 }
+
+.is-active {
+    background-color: aquamarine;
+}
