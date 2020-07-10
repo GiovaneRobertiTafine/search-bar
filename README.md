@@ -1,27 +1,32 @@
-# SearchBar
+<h3 align="center">Search Bar</h3>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+<h4 align="center">Search-bar with autocomplete</h4>
 
-## Development server
+:o: **Problem:**<br> Criar uma interface que consuma e liste registros de uma API,  selecionar e guardar itens desta lista com uma search-bar inserindo incremetações de destaques.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+:heavy_check_mark: **Solution:**<br> Pesquisas referente ao autocomplete e gerenciamento de consumo e estilos com recursos do Angular
 
-## Code scaffolding
+:dart: **Impact:**<br> Aprendizado da liguagem, base como estudo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+:bicyclist: **Run:**
 
-## Build
+-   Clone this repository
+-   Install the dependences:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+```
 
-## Running unit tests
+-   To run:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+ng serve
+```
 
-## Running end-to-end tests
+⚙️ **Requirements:**
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+-   Node
+-   NPM
+-   Angular CLI 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<a href="https://medium.com/@uditgogoi1/search-bar-with-autocomplete-using-angular-5-and-angular-material-c5a77a429da7">References</a>
