@@ -66,4 +66,23 @@ export class SearchBarComponent implements OnInit {
         if (result) return (this.autoCompleteList = [...searchRes]);
         this.autoCompleteList = [];
     }
+
+    // Add o item selecionado
+    filterPostList(event) {
+        var post = event.source.value;
+        if (post) {
+            this.dataService.searchOption.push(post);
+            console.log(this.dataService.searchOption);
+            this.onSelectedOption.emit(this.dataService.searchOption);
+        } else {
+            this.dataService.searchOption = [];
+        }
+        this.focusOnPlaceInput();
+    }
+
+    // focus the input field and remove any unwanted text.
+    focusOnPlaceInput() {
+        this.autocompleteInput.nativeElement.focus();
+        this.autocompleteInput.nativeElement.value = '';
+    }
 }
