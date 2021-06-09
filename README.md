@@ -1,6 +1,6 @@
 <h3 align="center">Search Bar</h3>
 
-<h4 align="center">Search-bar com autocomplete e consumindo API</h4>
+<h4 align="center">Aplicação Angular contendo search-bar com autocomplete e consumindo API</h4>
 
 :o: **Problema:**<br> Criar uma interface que consuma e liste registros de uma API externa,  selecionar e guardar itens desta lista com uma search-bar inserindo incremetações de destaques.
 
