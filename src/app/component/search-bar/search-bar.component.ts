@@ -37,6 +37,7 @@ export class SearchBarComponent implements OnInit {
             } else {
                 console.log('Aguarde um momento');
             }
+            return null;
         });
     }
 
@@ -65,6 +66,8 @@ export class SearchBarComponent implements OnInit {
 
         if (result) return (this.autoCompleteList = [...searchRes]);
         this.autoCompleteList = [];
+
+        return null;
     }
 
     // Add o item selecionado
