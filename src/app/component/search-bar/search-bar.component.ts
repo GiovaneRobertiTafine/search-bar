@@ -16,7 +16,7 @@ export class SearchBarComponent implements OnInit {
 
     filtermyControl: Observable<string[]>;
 
-    @ViewChild('autocompleteInput', { static: false }) autocompleteInput: ElementRef;
+    @ViewChild('autocompleteInput') autocompleteInput: ElementRef;
     @Output() onSelectedOption = new EventEmitter();
 
     constructor(private dataService: DataService) {}
