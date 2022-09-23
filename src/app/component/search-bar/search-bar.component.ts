@@ -19,7 +19,7 @@ export class SearchBarComponent implements OnInit {
     @ViewChild('autocompleteInput') autocompleteInput: ElementRef;
     @Output() onSelectedOption = new EventEmitter();
 
-    constructor(private dataService: DataService) {}
+    constructor(public dataService: DataService) { }
 
     ngOnInit() {
         // get all the post

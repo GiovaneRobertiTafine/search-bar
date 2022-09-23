@@ -11,7 +11,7 @@ export class DataService {
     public searchOption = [];
     readonly postUrl: string = 'https://jsonplaceholder.typicode.com/posts';
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
 
     getPosts(): Observable<Post[]> {
         return this.http.get<Post[]>(this.postUrl).pipe(retry(3), catchError(this.handleError));

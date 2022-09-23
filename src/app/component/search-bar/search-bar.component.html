@@ -7,22 +7,11 @@
                 <mat-icon matChipRemove>cancel</mat-icon>
             </mat-chip>
 
-            <input
-                #autocompleteInput
-                type="text"
-                placeholder="Enter title"
-                aria-label="Number"
-                matInput
-                [formControl]="myControl"
-                [matAutocomplete]="auto"
-                [matChipInputFor]="chipList"
-            />
-            <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-                <mat-option
-                    *ngFor="let option of autoCompleteList"
-                    [value]="option"
-                    (onSelectionChange)="filterPostList($event)"
-                >
+            <input #autocompleteInput type="text" placeholder="Enter title" aria-label="Number" matInput
+                [formControl]="myControl" [matAutocomplete]="auto" [matChipInputFor]="chipList" />
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of autoCompleteList" [value]="option"
+                    (onSelectionChange)="filterPostList($event)">
                     {{ option.title }}
                 </mat-option>
             </mat-autocomplete>
